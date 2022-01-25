@@ -11,6 +11,13 @@ struct ContentView: View {
 
     
     var body: some View {
+    
+            ZStack {
+                Color.pink
+                        .ignoresSafeArea()
+            }
+        
+        
         VStack {
             Button(action: {
                 print("Winter")
@@ -25,7 +32,7 @@ struct ContentView: View {
             }
         
                 Button(action: {
-                    print("Summer")
+                    print("Sommer")
                         
                     })
                 {
@@ -38,7 +45,7 @@ struct ContentView: View {
             }
             
                 Button(action: {
-                    print("herbst")
+                    print("Herbst")
                     })
                 {
                     Image("herbst")
@@ -68,7 +75,8 @@ struct ContentView: View {
            
     }
        
-    }
+}
+
     
     
 struct ContentView_Previews: PreviewProvider {
