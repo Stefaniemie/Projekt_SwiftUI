@@ -15,7 +15,8 @@ struct ContentView: View {
             ZStack {
                 Color.pink
                         .ignoresSafeArea()
-                    Text("Jahreszeiten")
+                Text("Jahreszeiten").fontWeight(.thin)
+                    .font(.system(size: 30))
                     
                 
                 
@@ -24,7 +25,7 @@ struct ContentView: View {
         VStack {
             Text(buttonTitle)
                 .font(.title)
-                .fontWeight(.thin)
+                .fontWeight(.ultraLight)
                 .foregroundColor(.black)
                 .padding()
                 .frame(height: 100.0)
