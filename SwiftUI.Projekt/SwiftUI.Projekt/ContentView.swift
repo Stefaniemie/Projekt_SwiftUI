@@ -8,22 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-
+ @State var buttonTitle: String = "Klick auf ein Image und erfahre die Jahreszeit"
     
     var body: some View {
     
             ZStack {
                 Color.pink
                         .ignoresSafeArea()
+                    Text("Jahreszeiten")
+                    
+                
+                
             }
         
-        
         VStack {
+            Text(buttonTitle)
+                .font(.title)
+                .fontWeight(.thin)
+                .foregroundColor(.black)
+                .padding()
+                .frame(height: 100.0)
+        }
+        
             Button(action: {
-                print("Winter")
-                    
+                    buttonTitle = "Winter"
                 })
             {
+                
                 Image("Image-1")
                     .resizable()
                     .frame(width: 100, height: 100)
@@ -32,7 +43,7 @@ struct ContentView: View {
             }
         
                 Button(action: {
-                    print("Sommer")
+                    buttonTitle = "Sommer"
                         
                     })
                 {
@@ -40,12 +51,13 @@ struct ContentView: View {
                         .resizable()
                         .frame(width: 100, height: 100)
                         .padding(20)
+                    
                         
                 
             }
             
                 Button(action: {
-                    print("Herbst")
+                    buttonTitle = "Herbst"
                     })
                 {
                     Image("herbst")
@@ -56,7 +68,7 @@ struct ContentView: View {
                 }
                     
                 Button(action: {
-                    print("Fruehling")
+                    buttonTitle = "Fruehling"
                     })
                 {
                     Image("fruehling")
@@ -66,7 +78,8 @@ struct ContentView: View {
                     
                             
                 }
-                
+            
+                        
                  
       
                     
@@ -75,10 +88,10 @@ struct ContentView: View {
            
     }
        
-}
 
     
-    
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
