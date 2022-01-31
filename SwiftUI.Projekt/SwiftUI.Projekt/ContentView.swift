@@ -18,8 +18,6 @@ struct ContentView: View {
                 Text("Jahreszeiten").fontWeight(.thin)
                     .font(.system(size: 30))
                     
-                
-                
             }
         
         VStack {
